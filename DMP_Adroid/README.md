@@ -240,60 +240,51 @@
 
 
 ## Stream Video/YouTube Data
-1. Video & YouTube Data is stored in a json file under assets folder.
-
+Video & YouTube Data is stored in a json file under assets folder.
 
 
     videolist.json
     
         {
-          "movies": [
-            {
-              "id": 1,
-              "title": "Big Buck Bunny",
-              "playback": "0:09:56",
-              "imgUrl": "https://peach.blender.org/wp-content/uploads/bbb-splash.png",
-              "url": "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_h264.mov",
-              "views": 0
-            },
-            {
-              "id": 2,
-              "title": "Elephant Dream",
-              "playback": "0:10:53",
-              "imgUrl": "https://orange.blender.org/wp-content/themes/orange/images/media/gallery/s4_both.jpg",
-              "url": "https://ia700406.us.archive.org/31/items/ElephantsDream/ed_hd_512kb.mp4",
-              "views": 0
-            },
-            {
-              "id": 3,
-              "title": "Sintel",
-              "playback": "0:14:48",
-              "imgUrl": "https://durian.blender.org/wp-content/uploads/2010/06/08.2l_comp_000465.jpg",
-              "url": "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv",
-              "views": 0
-            },
-            {
-              "id": 4,
-              "title": "Tears of Steel",
-              "playback": "0:12:14",
-              "imgUrl": "https://mango.blender.org/wp-content/gallery/final-renders/graded_edit_001679.jpg",
-              "url": "http://ftp.halifax.rwth-aachen.de/blender/demo/movies/ToS/tears_of_steel_1080p.mov",
-              "views": 0
-            },
-            {
-              "id": 5,
-              "title": "SmartView SDK Demo",
-              "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/SamsungSamrtViewSDKDemo.jpg",
-              "url": "http://www.samsungdforum.com/smartview/sample/video/SamsungSamrtViewSDKDemo.mp4"
-            },
-            {
-              "id": 6,
-              "title": "Samsung SmartView SDK",
-              "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/SamsungSmartViewSDK.jpg",
-              "url": "http://www.samsungdforum.com/smartview/sample/video/SamsungSmartViewSDK.mp4"
-            }
-          ]
-        }
+		  "movies": [
+			{
+			  "id": 1,
+			  "title": "Big Buck Bunny",
+			  "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/BigBuckBunny.jpg",
+			  "url": "http://www.samsungdforum.com/smartview/sample/video/BigBuckBunny.mp4"
+			},
+			{
+			  "id": 2,
+			  "title": "Elephant Dream",
+			  "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/ElephantsDream.jpg",
+			  "url": "http://www.samsungdforum.com/smartview/sample/video/ElephantsDream.mp4"
+			},
+			{
+			  "id": 3,
+			  "title": "Sintel",
+			  "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/Sintel.jpg",
+			  "url": "http://www.samsungdforum.com/smartview/sample/video/Sintel.mp4"
+			},
+			{
+			  "id": 4,
+			  "title": "Tears of Steel",
+			  "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/TearsOfSteel.jpg",
+			  "url": "http://www.samsungdforum.com/smartview/sample/video/TearsOfSteel.mp4"
+			},
+			{
+			  "id": 5,
+			  "title": "SmartView SDK Demo",
+			  "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/SamsungSamrtViewSDKDemo.jpg",
+			  "url": "http://www.samsungdforum.com/smartview/sample/video/SamsungSamrtViewSDKDemo.mp4"
+			},
+			{
+			  "id": 6,
+			  "title": "Samsung SmartView SDK",
+			  "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/SamsungSmartViewSDK.jpg",
+			  "url": "http://www.samsungdforum.com/smartview/sample/video/SamsungSmartViewSDK.mp4"
+			}
+		  ]
+		}
         
     youtubelist.json
 
