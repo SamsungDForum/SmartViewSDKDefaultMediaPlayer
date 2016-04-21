@@ -20,27 +20,28 @@
 
 1.Select your your TV then change "connected" status.
 
- ![](/DMP_ScreenShot/SmartViewSDK_Screenshot_02.png)
+![](/DMP_ScreenShot/SmartViewSDK_Screenshot_02.png)
 
 2.Then choose video item to play.
 
- ![](/DMP_ScreenShot/SmartViewSDK_Screenshot_03.png)
+![](/DMP_ScreenShot/SmartViewSDK_Screenshot_03.png)
 
 3.DMP is launched and play your video content.
- ![](/DMP_ScreenShot/SmartViewSDK_Screenshot_03_tv.png)
+
+![](/DMP_ScreenShot/SmartViewSDK_Screenshot_03_TV.png)
 
 4.Also you can play youtube
 
- ![](/DMP_ScreenShot/SmartViewSDK_Screenshot_04.png)
+![](/DMP_ScreenShot/SmartViewSDK_Screenshot_04.png)
 
 5.Choose youtuve content to play.
 
- ![](/DMP_ScreenShot/SmartViewSDK_Screenshot_05.png)
+![](/DMP_ScreenShot/SmartViewSDK_Screenshot_05.png)
 
 
 6.DMP is launched and play your youtube content.
 
- ![](/DMP_ScreenShot/SmartViewSDK_Screenshot_05_tv.png)
+![](/DMP_ScreenShot/SmartViewSDK_Screenshot_05_TV.png)
 
 ## Disconnect
 
