@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="350dp"
+        android:layout_height="175dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/rlv_buttons"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/thumbnail"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btnRewind"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/rewind"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/pause"
+            android:layout_toRightOf="@+id/btnRewind"
+            android:layout_toEndOf="@+id/btnRewind"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/forward"
+            android:layout_toRightOf="@+id/btnPlay"
+            android:layout_toEndOf="@+id/btnPlay"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/stop"
+            android:layout_toLeftOf="@+id/btnMute"
+            android:layout_toStartOf="@+id/btnMute"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btnMute"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/mute"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

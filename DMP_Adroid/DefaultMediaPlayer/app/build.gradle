@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.0"
+
+    defaultConfig {
+        applicationId "samsung.defaultmediaplayer"
+        minSdkVersion 18
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.+'
+    compile 'com.android.support:design:22.+' //facing errors for 23.+
+    compile files('libs/android-smartview-sdk-2.0.16.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/commons-io-2.4/commons-io-2.4.jar')
+}

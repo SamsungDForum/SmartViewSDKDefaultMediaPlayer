@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rlvTitileBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCastIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/txtDialogText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imgCastIcon"
+            android:text="@string/lst_SelectTv"
+            android:textSize="25sp"
+            android:paddingLeft="5dp"/>
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/rlvProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rlvTitileBar">
+        <ProgressBar
+            android:id="@+id/ProgressSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDuration="1000"
+            android:indeterminateDrawable="@drawable/progressbar_discovery"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+    </RelativeLayout>-->
+
+    <ListView
+        android:id="@+id/tvList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlvTitileBar"
+        android:clickable="true"/>
+
+</RelativeLayout>

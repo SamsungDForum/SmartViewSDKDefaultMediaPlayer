@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/video_thumbnail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/video_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/video_thumbnail"
+        android:layout_toEndOf="@+id/video_thumbnail"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+    <!--
+           <Button
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:id="@+id/rewind_button"
+               android:text="@string/rewind"
+               android:background="@drawable/button_background"
+               android:layout_alignTop="@+id/video_thumbnail"
+               android:layout_toRightOf="@+id/video_thumbnail"
+               android:layout_toEndOf="@+id/video_thumbnail"
+               android:layout_marginStart="25dp"
+               android:layout_marginLeft="25dp"
+               android:gravity="center"
+               android:layout_centerVertical="true"
+               android:layout_marginTop="17dp"
+               android:clickable="true"
+               android:onClick=""/>
+
+           <Button
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:id="@+id/play_button"
+               android:text="@string/play"
+               android:background="@drawable/button_background"
+               android:clickable="true"
+               android:layout_alignTop="@+id/rewind_button"
+               android:layout_toRightOf="@+id/rewind_button"
+               android:layout_toEndOf="@+id/rewind_button"
+               android:layout_marginStart="5dp"
+               android:layout_marginLeft="5dp"
+               android:gravity="center"
+               android:layout_centerVertical="true"/>
+
+           <Button
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:id="@+id/pause_button"
+               android:text="@string/pause"
+               android:background="@drawable/button_background"
+               android:clickable="true"
+               android:layout_alignTop="@+id/play_button"
+               android:layout_toRightOf="@+id/play_button"
+               android:layout_toEndOf="@+id/play_button"
+               android:layout_marginStart="5dp"
+               android:layout_marginLeft="5dp"
+               android:gravity="center"
+               android:layout_centerVertical="true"/>
+
+           <Button
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:id="@+id/frwd_button"
+               android:text="@string/forward"
+               android:background="@drawable/button_background"
+               android:clickable="true"
+               android:layout_alignTop="@+id/pause_button"
+               android:layout_toRightOf="@+id/pause_button"
+               android:layout_toEndOf="@+id/pause_button"
+               android:layout_marginStart="5dp"
+               android:layout_marginLeft="5dp"
+               android:gravity="center"
+               android:layout_centerVertical="true"/>
+    -->
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="T_BLACK">#AA000000</color>
+    <color name="BLACK">#000000</color>
+    <color name="SAFRON">#FF9800</color>
+    <color name="T_SAFRON">#88FF9800</color>
+    <color name="DARKSAFRON">#EF6C00</color>
+    <color name="T_DARKSAFRON">#88EF6C00</color>
+    <color name="WHITE">#FFFFFF</color>
+    <color name="T_WHITE">#AAFFFFFF</color>
+    <color name="T_BLUE">#AA40C4FF</color>
+</resources>
