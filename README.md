@@ -34,7 +34,7 @@
 
 ![](/DMP_ScreenShot/SmartViewSDK_Screenshot_04.png)
 
-5.Choose youtuve content to play.
+5.Choose youtube content to play.
 
 ![](/DMP_ScreenShot/SmartViewSDK_Screenshot_05.png)
 

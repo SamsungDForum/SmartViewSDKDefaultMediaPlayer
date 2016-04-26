@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xwt-fA-kXe">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="V6w-1f-Eot">
+            <objects>
+                <viewController storyboardIdentifier="FirstView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bSv-oz-Hhe" customClass="FirstViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aMW-Dw-8jS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NaI-QU-FUG">
+                                <rect key="frame" x="29" y="80" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="VIDEOS"/>
+                                <connections>
+                                    <action selector="videoBtnAction:" destination="bSv-oz-Hhe" eventType="touchUpInside" id="RfL-H4-LIY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i6Q-xp-REo">
+                                <rect key="frame" x="211" y="80" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="YOUTUBE"/>
+                                <connections>
+                                    <action selector="youtubeBtnAction:" destination="bSv-oz-Hhe" eventType="touchUpInside" id="8n3-Ic-f1I"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="71L-gU-4ns">
+                                <rect key="frame" x="0.0" y="122" width="160" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="scrollThreeView" pagingEnabled="YES" id="VEo-Bm-sfU">
+                                <rect key="frame" x="0.0" y="125" width="320" height="467"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vuN-Ld-5bu"/>
+                    <connections>
+                        <outlet property="lineView" destination="71L-gU-4ns" id="jkl-YI-hTV"/>
+                        <outlet property="photoButton" destination="NaI-QU-FUG" id="llp-YW-UkR"/>
+                        <outlet property="scrollView" destination="VEo-Bm-sfU" id="aDM-Jd-bbt"/>
+                        <outlet property="youtubeButton" destination="i6Q-xp-REo" id="glg-jj-CP2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjn-Kg-Rtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="328"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="d8A-ti-5Mc">
+            <objects>
+                <viewController storyboardIdentifier="photoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W3L-cN-KcO" customClass="PhotoViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="photoView" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="kvW-Lv-hY6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Mp-zH-Uzf">
+                            <size key="itemSize" width="318" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="photoCell" reuseIdentifier="photoCell" id="n6K-mI-Rdb" customClass="PhotoThumbnail" customModule="MediaPlayer" customModuleProvider="target">
+                                <rect key="frame" x="1" y="0.0" width="318" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="318" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BgU-tb-EMT">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3cj-i1-bZL">
+                                            <rect key="frame" x="129" y="31" width="181" height="39"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="318" height="100"/>
+                                <connections>
+                                    <outlet property="imgView" destination="BgU-tb-EMT" id="Zlb-Lh-qjv"/>
+                                    <outlet property="titleTxt" destination="3cj-i1-bZL" id="7bO-w3-yv5"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="W3L-cN-KcO" id="CZ8-uc-tXO"/>
+                            <outlet property="delegate" destination="W3L-cN-KcO" id="y8s-DD-L65"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="photoController" destination="kvW-Lv-hY6" id="uQa-va-wNG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S1K-Nv-iGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856" y="328"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="7rd-Pz-d69">
+            <objects>
+                <viewController storyboardIdentifier="videoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="960-mM-dSZ" customClass="VideoViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="videoController" dataMode="prototypes" id="3P6-4p-UlW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="p88-EG-E6y">
+                            <size key="itemSize" width="320" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="pud-IT-MfG" customClass="VideoThumbnail" customModule="MediaPlayer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="videoView" id="oPm-QK-Es5">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PMJ-w0-Xmj">
+                                            <rect key="frame" x="128" y="35" width="184" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="320" height="100"/>
+                                <connections>
+                                    <outlet property="imgView" destination="oPm-QK-Es5" id="VH9-cV-FM5"/>
+                                    <outlet property="titletxt" destination="PMJ-w0-Xmj" id="YFb-en-6Rq"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <connections>
+                        <outlet property="videoController" destination="3P6-4p-UlW" id="jO1-I3-fPu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTG-SG-aJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261" y="328"/>
+        </scene>
+        <!--Youtube View Controller-->
+        <scene sceneID="whw-aq-DNv">
+            <objects>
+                <viewController storyboardIdentifier="youtubeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pNW-Fd-eTh" customClass="YoutubeViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="TrO-BP-t0h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vch-8P-Kla">
+                            <size key="itemSize" width="319" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="youtubeCell" reuseIdentifier="youtubeCell" id="r1O-5a-eY8" customClass="YoutubeThumbnail" customModule="MediaPlayer" customModuleProvider="target">
+                                <rect key="frame" x="1" y="0.0" width="319" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2iF-DT-Zri">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jxd-3J-fcw">
+                                            <rect key="frame" x="122" y="34" width="189" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="319" height="100"/>
+                                <connections>
+                                    <outlet property="titleTxt" destination="jxd-3J-fcw" id="40s-bY-j4U"/>
+                                    <outlet property="youtubeImgView" destination="2iF-DT-Zri" id="R5t-Sp-MtX"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <connections>
+                        <outlet property="youtubeController" destination="TrO-BP-t0h" id="Uri-WQ-SGq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e45-up-ljz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640" y="328"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="8fb-QX-cfA">
+            <objects>
+                <viewController storyboardIdentifier="playView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n6Z-B8-xGc" customClass="PlayViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UtF-uP-0EM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="IoA-EC-Rs7">
+                                <rect key="frame" x="13" y="10" width="252" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="pZf-uz-pp9">
+                                <rect key="frame" x="13" y="150" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="doC-eH-wft">
+                                <rect key="frame" x="231" y="150" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="q05-f3-L9u">
+                                <rect key="frame" x="184" y="150" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="joz-31-C6d">
+                                <rect key="frame" x="50" y="146" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="w67-mc-iHs">
+                                <rect key="frame" x="95" y="150" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImage" destination="IoA-EC-Rs7" id="yv4-LB-a4W"/>
+                        <outlet property="forwardImage" destination="w67-mc-iHs" id="2ks-h2-xQg"/>
+                        <outlet property="muteUnmuteImage" destination="doC-eH-wft" id="t6r-V1-clD"/>
+                        <outlet property="playPauseImage" destination="joz-31-C6d" id="R7f-Hc-nVy"/>
+                        <outlet property="rewindImage" destination="pZf-uz-pp9" id="K6N-dv-yfJ"/>
+                        <outlet property="stopImage" destination="q05-f3-L9u" id="sLD-ew-SU3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fh2-fY-F3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028" y="328"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WV3-AK-hq6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xwt-fA-kXe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y43-Md-Xbg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bSv-oz-Hhe" kind="relationship" relationship="rootViewController" id="Nw8-fm-RCc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4a-81-7C7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27" y="328"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</document>
