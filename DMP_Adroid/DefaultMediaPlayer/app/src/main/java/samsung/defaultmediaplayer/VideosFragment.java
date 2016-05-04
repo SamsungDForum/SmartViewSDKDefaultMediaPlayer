@@ -105,25 +105,15 @@ public class VideosFragment extends Fragment{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                /*Check if DMP is supported.*/
-                if (!MediaLauncherSingleton.getInstance().isDMPSupported()) {
-                    Toast.makeText(getActivity(), "TV doesn't support DefaultMediaPlayer.\nPlease connect another TV.", Toast.LENGTH_SHORT).show();
+                if (CastStateMachineSingleton.getInstance().getCurrentCastState() == CastStates.CONNECTED) {
+
+                    /*Get position of the clicked image..*/
+                    final VideosImageItem item = (VideosImageItem) parent.getItemAtPosition(position);
+
+                    /*Send this url to TV..*/
+                    MediaLauncherSingleton.getInstance().playContent(item.getUrl(), item.getImageUrl());
                 } else {
-                    if (MediaLauncherSingleton.getInstance().getService() != null &&
-                            CastStateMachineSingleton.getInstance().getCurrentCastState() == CastStates.CONNECTED) {
-                        /*Get position of the clicked image..*/
-                        final VideosImageItem item = (VideosImageItem) parent.getItemAtPosition(position);
-
-                        /*Send this url to TV..*/
-                        Log.v(TAG, "Sending video url to TV..");
-                        MediaLauncherSingleton.getInstance().playContent(item.getUrl());
-
-                        /*Open Controls Dialogue..*/
-                        Toast.makeText(getActivity(), "Launching..", Toast.LENGTH_SHORT).show();
-                        PlaybackControls.getInstance(getActivity()).showPlayBackControls(item.getImageUrl());
-                    } else {
-                        Toast.makeText(getActivity(), "Please connect to a TV.", Toast.LENGTH_SHORT).show();
-                    }
+                    Toast.makeText(getActivity(), "Please connect to a TV.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

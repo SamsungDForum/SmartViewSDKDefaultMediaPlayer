@@ -8,5 +8,6 @@
     <color name="T_DARKSAFRON">#88EF6C00</color>
     <color name="WHITE">#FFFFFF</color>
     <color name="T_WHITE">#AAFFFFFF</color>
+    <color name="T_GREY">#33616161</color>
     <color name="T_BLUE">#AA40C4FF</color>
 </resources>

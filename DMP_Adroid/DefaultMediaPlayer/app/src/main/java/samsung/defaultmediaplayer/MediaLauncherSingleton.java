@@ -10,6 +10,7 @@ package samsung.defaultmediaplayer;
 import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.samsung.multiscreen.Channel;
 import com.samsung.multiscreen.Client;
@@ -56,7 +57,7 @@ public class MediaLauncherSingleton
         CastStateMachineSingleton.getInstance().setCurrentCastState(CastStates.CONNECTED);
     }
 
-    public boolean isDMPSupported() {
+    private boolean isDMPSupported() {
         return mIsDMPSupported;
     }
 
@@ -72,15 +73,16 @@ public class MediaLauncherSingleton
         mMediaPlayer.getInfo(new Result<com.samsung.multiscreen.ApplicationInfo>() {
             @Override
             public void onSuccess(com.samsung.multiscreen.ApplicationInfo appInfo) {
-                if(appInfo != null) {
+                if (appInfo != null) {
                     Log.d(TAG, "App Info: " + appInfo.toString());
-                    if(appInfo.getVersion().contains("1.0.0")) {
+                    if (appInfo.getVersion().contains("1.0.0")) {
                         setDMPSupported(false);
                     } else {
                         setDMPSupported(true);
                     }
                 }
             }
+
             @Override
             public void onError(com.samsung.multiscreen.Error error) {
                 Log.d(TAG, "Error: " + error.toString());
@@ -121,24 +123,32 @@ public class MediaLauncherSingleton
     /**
      * Method to play content on T.V.
      * @param uri : Url of content which has to be launched on TV.
+     * @param thumbnail : Thumbnail url.
      */
-    public void playContent(String uri) {
-        if (null != mMediaPlayer) {
+    public void playContent(final String uri, final String thumbnail) {
+        if (null != mMediaPlayer && null != mService) {
             Log.v(TAG, "Playing Content: " + uri);
-            mMediaPlayer.playContent(Uri.parse(uri), new Result<Boolean>() {
-                @Override
-                public void onSuccess(Boolean r) {
-                    Log.v(TAG, "playContent(): onSuccess.");
-                }
+            if(isDMPSupported()) {
+                mMediaPlayer.playContent(Uri.parse(uri), new Result<Boolean>() {
+                    @Override
+                    public void onSuccess(Boolean r) {
+                        Log.v(TAG, "playContent(): onSuccess.");
+                        PlaybackControls.getInstance(mContext).showPlayBackControls(thumbnail);
+                    }
 
-                @Override
-                public void onError(com.samsung.multiscreen.Error error) {
-                    Log.v(TAG, "playContent(): onError.");
-                }
-            });
+                    @Override
+                    public void onError(com.samsung.multiscreen.Error error) {
+                        Log.v(TAG, "playContent(): onError.");
+                        Toast.makeText(mContext, "Error in Launching Content!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            } else {
+                Toast.makeText(mContext, "TV doesn't support DefaultMediaPlayer.\n" +
+                        "Please connect another TV.", Toast.LENGTH_SHORT).show();
+            }
         }
         else{
-            Log.v(TAG, "playContent(): mMediaPlayer is NULL!");
+            Log.v(TAG, "playContent(): un-initialized mMediaPlayer.");
         }
 
         mMediaPlayer.setOnConnectListener(new Channel.OnConnectListener() {

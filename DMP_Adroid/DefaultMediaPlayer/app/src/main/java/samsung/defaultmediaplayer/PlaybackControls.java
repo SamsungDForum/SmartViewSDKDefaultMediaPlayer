@@ -56,8 +56,9 @@ public class PlaybackControls extends Dialog implements View.OnClickListener{
         btnMuteUnmute.setOnClickListener(this);
 
         if(null != thumbnailImageUrl) {
-            thumbnail.setBackgroundColor(getContext().getResources().getColor(R.color.BLACK));
-            Picasso.with(getContext()).load(thumbnailImageUrl).memoryPolicy(MemoryPolicy.NO_STORE).into(thumbnail);
+            //thumbnail.setBackgroundColor(getContext().getResources().getColor(R.color.BLACK));
+
+            Picasso.with(getContext()).load(thumbnailImageUrl).error(R.drawable.thumbnail).memoryPolicy(MemoryPolicy.NO_STORE).into(thumbnail);
         }
 
         isPlaying   = true;

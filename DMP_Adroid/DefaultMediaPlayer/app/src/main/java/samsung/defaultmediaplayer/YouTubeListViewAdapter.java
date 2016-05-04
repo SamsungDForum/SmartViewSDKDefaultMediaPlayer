@@ -77,7 +77,7 @@ public class YouTubeListViewAdapter extends ArrayAdapter<YouTubeImageItem> {
         AsyncTaskParams param = new AsyncTaskParams(holder, item.getVideoId());
         new getYouTubeVideoTitle().execute(param); /*Load Video title..*/
         try { /*Load Video thumbnail..*/
-            Picasso.with(mContext).load(ytThumbnailURL).memoryPolicy(MemoryPolicy.NO_STORE).into(holder.image);
+            Picasso.with(mContext).load(ytThumbnailURL).error(R.drawable.thumbnail).memoryPolicy(MemoryPolicy.NO_STORE).into(holder.image);
         }catch(Exception e){
             e.printStackTrace();
         }

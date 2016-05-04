@@ -3,43 +3,43 @@
     {
       "id": 1,
       "title": "Big Buck Bunny",
-      "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/BigBuckBunny.jpg",
+      "imgUrl": "https://www.samsungdforum.com/smartview/sample/image/BigBuckBunny.jpg",
       "url": "http://www.samsungdforum.com/smartview/sample/video/BigBuckBunny.mp4"
     },
     {
       "id": 2,
       "title": "Elephant Dream",
-      "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/ElephantsDream.jpg",
+      "imgUrl": "https://www.samsungdforum.com/smartview/sample/image/ElephantsDream.jpg",
       "url": "http://www.samsungdforum.com/smartview/sample/video/ElephantsDream.mp4"
     },
     {
       "id": 3,
       "title": "Sintel",
-      "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/Sintel.jpg",
+      "imgUrl": "https://www.samsungdforum.com/smartview/sample/image/Sintel.jpg",
       "url": "http://www.samsungdforum.com/smartview/sample/video/Sintel.mp4"
     },
     {
       "id": 4,
       "title": "Tears of Steel",
-      "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/TearsOfSteel.jpg",
+      "imgUrl": "https://www.samsungdforum.com/smartview/sample/image/TearsOfSteel.jpg",
       "url": "http://www.samsungdforum.com/smartview/sample/video/TearsOfSteel.mp4"
     },
     {
       "id": 5,
       "title": "SmartView SDK Demo",
-      "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/SamsungSamrtViewSDKDemo.jpg",
+      "imgUrl": "https://www.samsungdforum.com/smartview/sample/image/SamsungSamrtViewSDKDemo.jpg",
       "url": "http://www.samsungdforum.com/smartview/sample/video/SamsungSamrtViewSDKDemo.mp4"
     },
     {
       "id": 6,
       "title": "Samsung SmartView SDK",
-      "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/SamsungSmartViewSDK.jpg",
+      "imgUrl": "https://www.samsungdforum.com/smartview/sample/image/SamsungSmartViewSDK.jpg",
       "url": "http://www.samsungdforum.com/smartview/sample/video/SamsungSmartViewSDK.mp4"
     },
     {
       "id": 7,
       "title": "Samsung SmartView SDK",
-      "imgUrl": "http://www.samsungdforum.com/smartview/sample/image/SamsungSmartViewSDK.jpg",
+      "imgUrl": "https://www.samsungdforum.com/smartview/sample/image/SamsungSmartViewSDK.jpg",
       "url": "http://www.samsungdforum.com/smartview/sample/video/SamsungSmartViewSDK.mp4"
     }
   ]

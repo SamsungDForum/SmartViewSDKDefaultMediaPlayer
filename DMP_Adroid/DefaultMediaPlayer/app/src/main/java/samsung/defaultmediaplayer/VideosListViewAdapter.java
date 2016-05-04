@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -64,7 +65,7 @@ public class VideosListViewAdapter extends ArrayAdapter<VideosImageItem> {
 
         VideosImageItem item = mData.get(position);
         /*Download the image from url and display on image view..*/
-        Picasso.with(mContext).load(item.getImageUrl()).into(holder.image);
+        Picasso.with(mContext).load(item.getImageUrl()).error(R.drawable.thumbnail).memoryPolicy(MemoryPolicy.NO_STORE).into(holder.image);
         holder.title.setText(item.getTitle());
         return rowView;
     }

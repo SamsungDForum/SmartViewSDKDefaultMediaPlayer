@@ -132,27 +132,20 @@ public class YouTubeFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                /*Check if DMP is supported.*/
-                if (!MediaLauncherSingleton.getInstance().isDMPSupported()) {
-                    Toast.makeText(getActivity(), "TV doesn't support DefaultMediaPlayer.\nPlease connect another TV.", Toast.LENGTH_SHORT).show();
-                } else {
-                    if (null != MediaLauncherSingleton.getInstance().getService() &&
-                            CastStateMachineSingleton.getInstance().getCurrentCastState() == CastStates.CONNECTED) {
-                        /*Get position of the clicked image..*/
-                        YouTubeImageItem item = (YouTubeImageItem) parent.getItemAtPosition(position);
-                        /*Create video Url from youtube id*/
-                        String ytVideoURL = "http://www.youtube.com/embed/" + item.getVideoId();
-                        /*Send this url to TV..*/
-                        Log.v(TAG, "Sending youtube url to TV..");
-                        MediaLauncherSingleton.getInstance().playContent(ytVideoURL);
+                if (CastStateMachineSingleton.getInstance().getCurrentCastState() == CastStates.CONNECTED) {
 
-                        /*Open Controls Dialogue..*/
-                        Toast.makeText(getActivity(), "Launching..", Toast.LENGTH_SHORT).show();
-                        String thumbnailUrl = "http://img.youtube.com/vi/" + item.getVideoId() + "/0.jpg";
-                        PlaybackControls.getInstance(getActivity()).showPlayBackControls(thumbnailUrl);
-                    } else {
-                        Toast.makeText(getActivity(), "Please connect to a TV.", Toast.LENGTH_SHORT).show();
-                    }
+                    /*Get position of the clicked image..*/
+                    YouTubeImageItem item = (YouTubeImageItem) parent.getItemAtPosition(position);
+
+                    /*Create video Url from youtube id*/
+                    String ytVideoURL = "http://www.youtube.com/embed/" + item.getVideoId();
+                    /*Create thumbnail URL from youtube id*/
+                    String thumbnailUrl = "http://img.youtube.com/vi/" + item.getVideoId() + "/0.jpg";
+
+                    /*Send this url to TV..*/
+                    MediaLauncherSingleton.getInstance().playContent(ytVideoURL, thumbnailUrl);
+                } else {
+                    Toast.makeText(getActivity(), "Please connect to a TV.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
