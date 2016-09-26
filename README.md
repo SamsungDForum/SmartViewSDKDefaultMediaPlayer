@@ -1,7 +1,10 @@
-#Default Media Player
+#Default Media Player 1.0
 
  Using Smart View SDK, send a content URL to a default media player app available on 2016 Samsung TVs(and will be expanded to 14,15 TVs later). Any non-DRM content supported by the HTML5 video tag is supported to watch in a basic player with a fixed UI. There is no testing process required to use the Default Media Player and there is no need to register your app to use this service
 
+> **Version Warning : 
+> This sample is not recommended for new development because it's only for DMP1.0. You should
+> check DefaultMediaPlayer2.0**
 
 ##Mobile
 
