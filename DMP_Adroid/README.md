@@ -1,4 +1,7 @@
 ##Prerequisite
+
+> Version Warning : This sample is not recommended for new development because it's only for DMP1.0. You should check DefaultMediaPlayer2.0
+
 ###1. [SmartView SDK Android Library](http://www.samsungdforum.com/AddLibrary/SmartViewDownload):  Android Package(Mobile)
 	
 	added source /libs/android-smartview-sdk-2.0.16.jar
